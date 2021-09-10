@@ -1,0 +1,22 @@
+[build]
+  command = "yarn build"
+  publish = "build"
+
+# Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+# Functions
+# [functions]
+#   directory = "functions"
+
+# Redirects
+# API Redirect
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200
